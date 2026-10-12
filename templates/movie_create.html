@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Movie</title>
+</head>
+<body>
+     <h1>Добавить новый фильм</h1>
+    <form method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="name">Название фильма</label>
+                    <input 
+                        type="text"
+                        id="name"
+                        name="name"
+                        description = "description"
+                        photo = "photo"
+                        placeholder="Например, Поворот не туда"
+                        required>
+                        <button type="submit" class="btn btn-create"> + Создать фильм </button>
+                </div>
+        </form>
+</body>
+</html>
